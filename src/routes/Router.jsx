@@ -6,7 +6,7 @@ import Kitchen from "../pages/Rooms/Kitchen";
 import LivingRoom from "../pages/Rooms/LivingRoom";
 import ShoppingCart from "../pages/ShoppingCart";
 
-const Router = () => {
+const Router = (props) => {
   const router = createBrowserRouter([
     {
       path: "/",
@@ -17,25 +17,25 @@ const Router = () => {
     },
     {
       path: "/living-room",
-      element: <LivingRoom />,
+      element: <LivingRoom {...props} />,
       label: "Living Room",
       exact: true,
     },
     {
       path: "/kitchen",
-      element: <Kitchen />,
+      element: <Kitchen {...props} />,
       label: "Kitchen",
       exact: true,
     },
     {
       path: "/kids-room",
-      element: <KidsRoom />,
+      element: <KidsRoom {...props} />,
       label: "Kid's Room",
       exact: true,
     },
     {
       path: "/shopping-cart",
-      element: <ShoppingCart />,
+      element: <ShoppingCart {...props} />,
       label: "Shopping Cart",
       exact: true,
     },

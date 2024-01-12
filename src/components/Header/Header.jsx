@@ -1,8 +1,8 @@
+import Cart from "../Cart/Cart";
 import Navbar from "../Navbar/Navbar";
 import styles from "./Header.module.css";
-import ShoppingCartImage from "/public/cart.png";
 
-export default function Header() {
+export default function Header({ props }) {
   // FIXME I am repeating data that can be found in routes
   const navigationLinks = [
     { to: "/", label: "HOME" },
@@ -11,14 +11,7 @@ export default function Header() {
     { to: "/kids-room", label: "KID'S ROOM" },
     {
       to: "/shopping-cart",
-      label: (
-        // Insterting the cart Png in Nav here by directly importing it
-        <img
-          className={styles.cart}
-          src={ShoppingCartImage}
-          alt="Shopping Cart"
-        />
-      ),
+      label: <Cart {...props} />,
     },
   ];
   return (
