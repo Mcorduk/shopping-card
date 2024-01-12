@@ -1,12 +1,8 @@
-import PropTypes from "prop-types";
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
-  // const [cartItems, setCartItems] = useState([]);
-
   const navigationLinks = [
     {
       to: "/",
@@ -50,12 +46,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-Navbar.propTypes = {
-  navLinks: PropTypes.arrayOf(
-    PropTypes.shape({
-      to: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-};

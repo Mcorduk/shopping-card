@@ -1,4 +1,4 @@
-export default function KidsRoom() {
+export default function KidsRoom({ addItemToCart }) {
   return (
     <>
       <main></main>

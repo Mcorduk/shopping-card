@@ -1,4 +1,4 @@
-export default function Kitchen() {
+export default function Kitchen({ addItemToCart }) {
   return (
     <>
       <main></main>
