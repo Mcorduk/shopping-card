@@ -1,9 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage";
-import Home from "../pages/Home";
-import KidsRoom from "../pages/KidsRoom";
-import Kitchen from "../pages/Kitchen";
-import LivingRoom from "../pages/LivingRoom";
+import Home from "../pages/Home/Home";
+import KidsRoom from "../pages/Rooms/KidsRoom";
+import Kitchen from "../pages/Rooms/Kitchen";
+import LivingRoom from "../pages/Rooms/LivingRoom";
+import ShoppingCart from "../pages/ShoppingCart";
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -30,6 +31,12 @@ const Router = () => {
       path: "/kids-room",
       element: <KidsRoom />,
       label: "Kid's Room",
+      exact: true,
+    },
+    {
+      path: "/shopping-cart",
+      element: <ShoppingCart />,
+      label: "Shopping Cart",
       exact: true,
     },
   ]);

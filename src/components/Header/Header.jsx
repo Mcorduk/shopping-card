@@ -1,3 +1,4 @@
+import ShoppingCartImage from "./cart.png";
 import styles from "./Header.module.css";
 import Navbar from "./Navbar/Navbar";
 
@@ -8,6 +9,16 @@ export default function Header() {
     { to: "/living-room", label: "LIVING ROOM" },
     { to: "/kitchen", label: "KITCHEN" },
     { to: "/kids-room", label: "KID'S ROOM" },
+    {
+      to: "/shopping-cart",
+      label: (
+        <img
+          className={styles.cart}
+          src={ShoppingCartImage}
+          alt="Shopping Cart"
+        />
+      ),
+    },
   ];
   return (
     <header className={styles.wrapper}>

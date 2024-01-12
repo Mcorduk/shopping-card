@@ -4,3 +4,8 @@
   align-items: center;
   border-bottom: black solid 2px;
 }
+
+.cart {
+  width: 24px;
+  height: 24px;
+}
