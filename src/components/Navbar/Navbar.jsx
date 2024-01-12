@@ -1,12 +1,32 @@
-import PropTypes from "prop-types";
+import PropTypes, { any } from "prop-types";
 import { NavLink } from "react-router-dom";
+import Cart from "../Cart/Cart";
 import styles from "./Navbar.module.css";
 
-export default function Navbar({ navLinks = [] }) {
+export default function Navbar({ cartItems, setCartItems }) {
+  const navigationLinks = [
+    {
+      to: "/",
+      label: "HOME",
+    },
+    {
+      to: "/living-room",
+      label: "LIVING ROOM",
+    },
+    {
+      to: "/kitchen",
+      label: "KITCHEN",
+    },
+    {
+      to: "/kids-room",
+      label: "KID'S ROOM",
+    },
+  ];
+
   return (
     <nav>
       <ul className={styles.wrapper}>
-        {navLinks.map((link, index) => (
+        {navigationLinks.map((link, index) => (
           <li key={index}>
             {/* Using NavLink isActive from react-router-dom library
             to give class to the active and non active navigation links */}
@@ -20,6 +40,9 @@ export default function Navbar({ navLinks = [] }) {
             </NavLink>
           </li>
         ))}
+        <li>
+          <Cart />
+        </li>
       </ul>
     </nav>
   );
