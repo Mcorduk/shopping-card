@@ -1,4 +1,6 @@
-export default function ShoppingCart() {
+import PropTypes from "prop-types";
+
+export default function ShoppingCart({ cartItems }) {
   return (
     <main>
       <header>
@@ -10,3 +12,7 @@ export default function ShoppingCart() {
     </main>
   );
 }
+
+ShoppingCart.propTypes = {
+  cartItems: PropTypes.array.isRequired,
+};

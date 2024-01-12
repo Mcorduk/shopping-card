@@ -15,7 +15,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header cartItems={cartItems} />
-        <Router addItemToCart={addItemToCart} />
+        <Router cartItems={cartItems} addItemToCart={addItemToCart} />
       </BrowserRouter>
     </>
   );

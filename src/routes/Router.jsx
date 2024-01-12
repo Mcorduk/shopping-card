@@ -5,7 +5,7 @@ import Home from "../pages/Home/Home";
 import KidsRoom from "../pages/Rooms/KidsRoom";
 import Kitchen from "../pages/Rooms/Kitchen";
 import LivingRoom from "../pages/Rooms/LivingRoom";
-import ShoppingCart from "../pages/ShoppingCart";
+import ShoppingCart from "../pages/ShoppingCartPage";
 
 const Router = (props) => {
   return (

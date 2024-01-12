@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Kitchen({ addItemToCart }) {
   return (
     <>
@@ -5,3 +7,7 @@ export default function Kitchen({ addItemToCart }) {
     </>
   );
 }
+
+Kitchen.propTypes = {
+  addItemToCart: PropTypes.func.isRequired,
+};

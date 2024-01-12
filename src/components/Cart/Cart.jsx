@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import styles from "./Cart.module.css";
 import ShoppingCartImage from "/public/cart.png";
 
-export default function Cart() {
+export default function Cart({ cartItems }) {
   return (
     <NavLink to="/shopping-cart">
       <img
