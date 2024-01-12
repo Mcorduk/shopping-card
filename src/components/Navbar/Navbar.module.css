@@ -24,7 +24,7 @@
     left: 0;
     background-color: #fff;
     /* Default underline color */
-    transition: width 0.3s ease;
+    transition: transform 0.3s ease, width 0.3s ease;
     /* Transition for underline width */
   }
 

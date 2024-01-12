@@ -1,6 +1,6 @@
-import ShoppingCartImage from "./cart.png";
+import Navbar from "../Navbar/Navbar";
 import styles from "./Header.module.css";
-import Navbar from "./Navbar/Navbar";
+import ShoppingCartImage from "/public/cart.png";
 
 export default function Header() {
   // FIXME I am repeating data that can be found in routes
@@ -12,6 +12,7 @@ export default function Header() {
     {
       to: "/shopping-cart",
       label: (
+        // Insterting the cart Png in Nav here by directly importing it
         <img
           className={styles.cart}
           src={ShoppingCartImage}
