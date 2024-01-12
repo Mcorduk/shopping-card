@@ -1,10 +1,15 @@
-export default function Navbar() {
+import { Link } from "react-router-dom";
+import styles from "./Navbar.module.css";
+
+export default function Navbar({ navLinks = [] }) {
   return (
     <nav>
       <ul>
-        <li>LIVING ROOM</li>
-        <li>KITCHEN</li>
-        <li>KID&apos;S ROOM</li>
+        {navLinks.map((link, index) => (
+          <li key={index}>
+            <Link to={link.to}>{link.label}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
