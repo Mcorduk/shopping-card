@@ -1,9 +1,12 @@
-import PropTypes, { any } from "prop-types";
+import PropTypes from "prop-types";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import styles from "./Navbar.module.css";
 
-export default function Navbar({ cartItems, setCartItems }) {
+export default function Navbar() {
+  // const [cartItems, setCartItems] = useState([]);
+
   const navigationLinks = [
     {
       to: "/",
