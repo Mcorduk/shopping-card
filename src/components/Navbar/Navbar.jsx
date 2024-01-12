@@ -9,7 +9,7 @@ export default function Navbar({ navLinks = [] }) {
         {navLinks.map((link, index) => (
           <li key={index}>
             {/* Using NavLink isActive from react-router-dom library
-            to give class to the active and non active navigation */}
+            to give class to the active and non active navigation links */}
             <NavLink
               className={(navData) =>
                 navData.isActive ? "active-link" : "non-active-link"
