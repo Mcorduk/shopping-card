@@ -7,3 +7,7 @@ export default function KidsRoom({ addItemToCart }) {
     </>
   );
 }
+
+KidsRoom.propTypes = {
+  addItemToCart: PropTypes.func.isRequired,
+};
