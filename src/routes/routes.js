@@ -1,36 +1,35 @@
 // routes.js
 
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Home from "./components/Home";
-import Products from "./components/Products";
+import Home from "./pages/Home";
+import KidsRoom from "./pages/KidsRoom";
+import Kitchen from "./pages/Kitchen";
+import LivingRoom from "./pages/LivingRoom";
 
 const routes = [
   {
     path: "/",
     component: Home,
-    label: "Home", // Optional: You can include additional properties like labels
+    label: "Home",
     exact: true,
   },
   {
-    path: "/products",
-    component: Products,
-    label: "Products",
+    path: "/living-rrom",
+    page: LivingRoom,
+    label: "Living Room",
     exact: true,
   },
   {
-    path: "/about",
-    component: About,
-    label: "About Us",
+    path: "/kitchen",
+    component: Kitchen,
+    label: "Kitchen",
     exact: true,
   },
   {
-    path: "/contact",
-    component: Contact,
-    label: "Contact",
+    path: "/kids-room",
+    component: KidsRoom,
+    label: "Kid's Room",
     exact: true,
   },
-  // Additional routes can be added here
 ];
 
 export default routes;

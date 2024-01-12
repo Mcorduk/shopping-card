@@ -1,10 +1,10 @@
-import Navbar from "../components/Header/Navbar/Navbar";
+import Header from "../components/Header/Header";
 
 export default function Home() {
   return (
-    <header>
-      <h1>NOBLENEST LIVING</h1>
-      <Navbar />
-    </header>
+    <>
+      <Header />
+      <main></main>
+    </>
   );
 }

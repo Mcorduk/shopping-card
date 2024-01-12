@@ -1,1 +1,35 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
 
+.wrapper li a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    /* Default underline color */
+    transition: width 0.3s ease;
+    /* Transition for underline width */
+  }
+
+  &:hover:before {
+    width: 100%;
+    /* Underline width on hover */
+  }
+}
