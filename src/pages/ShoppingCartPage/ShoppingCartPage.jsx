@@ -24,7 +24,7 @@ export default function ShoppingCart(props) {
         </section>
       ) : (
         <p style={{ fontSize: "1.6rem" }}>
-          Your cart is empty. <Link to="/living-room">Keep Shopping</Link>
+          Your cart is empty. <Link to="/living-room">Keep Shopping Oni!</Link>
         </p>
       )}
     </main>
