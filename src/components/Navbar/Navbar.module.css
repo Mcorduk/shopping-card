@@ -33,3 +33,8 @@
     /* Underline width on hover */
   }
 }
+
+/* Important is necessary here*/
+.active-link {
+  color: lightgoldenrodyellow !important;
+}

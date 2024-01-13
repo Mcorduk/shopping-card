@@ -67,7 +67,3 @@ h6 {
 #__next {
   isolation: isolate;
 }
-
-.active-link {
-  color: gray !important;
-}

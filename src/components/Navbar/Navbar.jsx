@@ -31,7 +31,7 @@ export default function Navbar(props) {
             to give class to the active and non active navigation links */}
             <NavLink
               className={(navData) =>
-                navData.isActive ? "active-link" : "non-active-link"
+                navData.isActive ? styles["active-link"] : "non-active-link"
               }
               to={link.to}
             >
