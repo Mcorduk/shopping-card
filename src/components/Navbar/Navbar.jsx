@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Cart from "../Cart/Cart";
+import Cart from "../Cart/CartIcon/Cart";
 import styles from "./Navbar.module.css";
 
 export default function Navbar(props) {

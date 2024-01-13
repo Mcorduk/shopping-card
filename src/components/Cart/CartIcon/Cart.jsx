@@ -18,5 +18,5 @@ export default function Cart({ cartItems }) {
   );
 }
 Cart.propTypes = {
-  cartItems: PropTypes.array.isRequired,
+  cartItems: PropTypes.object.isRequired,
 };
