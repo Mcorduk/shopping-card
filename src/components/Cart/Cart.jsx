@@ -4,6 +4,8 @@ import styles from "./Cart.module.css";
 import ShoppingCartImage from "/src/assets/images/cart.png";
 
 export default function Cart({ cartItems }) {
+  const distinctCountItems = Object.keys(cartItems).length;
+
   return (
     <NavLink className={styles.notification} to="/shopping-cart">
       <img
@@ -11,7 +13,7 @@ export default function Cart({ cartItems }) {
         src={ShoppingCartImage}
         alt="Shopping Cart"
       />
-      <span className={styles.badge}>{cartItems.length}</span>
+      <span className={styles.badge}>{distinctCountItems}</span>
     </NavLink>
   );
 }
