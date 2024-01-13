@@ -5,11 +5,25 @@
   margin: 10px;
 }
 
+.wrapper figcaption,
 .wrapper section {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   min-width: 100%;
+
+}
+
+.wrapper figcaption {
+  justify-content: space-between;
   color: white;
   font-size: 1.2rem;
+}
+
+.wrapper section {
+  justify-content: space-around;
+}
+
+.wrapper input {
+  max-width: 40px;
+  margin-left: 5px;
 }
