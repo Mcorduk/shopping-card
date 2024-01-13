@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import useProductInfo from "../../hooks/useProductInfo";
 import styles from "./ProductCard.module.css";
+import useProductInfo from "/src/hooks/useProductInfo";
 
 export default function ProductCard({ productId }) {
   const { data, error, loading } = useProductInfo(productId);
@@ -19,5 +19,5 @@ export default function ProductCard({ productId }) {
 }
 
 ProductCard.propTypes = {
-  productId: PropTypes.int.isRequired,
+  productId: PropTypes.number.isRequired,
 };

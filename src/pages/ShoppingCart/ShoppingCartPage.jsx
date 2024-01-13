@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import styles from "./ShoppingCartPage.module.css";
 
 export default function ShoppingCart({ cartItems }) {
   return (

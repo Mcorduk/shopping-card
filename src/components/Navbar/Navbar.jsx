@@ -17,8 +17,8 @@ export default function Navbar(props) {
       label: "KITCHEN",
     },
     {
-      to: "/kids-room",
-      label: "KID'S ROOM",
+      to: "/office",
+      label: "OFFICE",
     },
   ];
 
