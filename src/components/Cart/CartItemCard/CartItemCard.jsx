@@ -1,33 +1,17 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
 import styles from "./CartItemCard.module.css";
 
-export default function CartItemCard({ cartItem, addItemToCart }) {
-  const [quantity, setQuantity] = useState(cartItem.quantity);
-
-  const handleQuantityChange = (event) => {
-    setQuantity(Number(event.target.value));
-  };
-
+export default function CartItemCard({ cartItem }) {
   return (
     <figure className={styles.wrapper}>
       <img src={cartItem.img} />
       <figcaption>
-        <p>{cartItem.title}</p>
-        <p>{cartItem.price}$</p>
+        <p>{cartItem.name}</p>
+        <p>Price: {cartItem.price}$</p>
+
+        <p>Quantity: {cartItem.quantity}</p>
+        <p>Total: {cartItem.price * cartItem.quantity}$</p>
       </figcaption>
-      <section>
-        <label htmlFor="product-quantity"></label>
-        <input
-          id="product-quantity"
-          type="number"
-          name="product-quantity"
-          onChange={handleQuantityChange}
-          value={quantity}
-          min={1}
-          max={10}
-        />
-      </section>
     </figure>
   );
 }

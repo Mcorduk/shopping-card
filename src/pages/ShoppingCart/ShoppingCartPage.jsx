@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import CartItemCard from "../../components/Cart/CartItemCard/CartItemCard";
-// import styles from "./ShoppingCartPage.module.css";
+import styles from "./ShoppingCartPage.module.css";
 
 export default function ShoppingCart(props) {
   const cartItemArray = Object.values(props.cartItems);
@@ -11,8 +11,7 @@ export default function ShoppingCart(props) {
         <h2>Your Cart</h2>
         <hr />
       </header>
-
-      <section>
+      <section className={styles.wrapper}>
         {cartItemArray.map((cartItem) => (
           <CartItemCard
             key={cartItem.id}
