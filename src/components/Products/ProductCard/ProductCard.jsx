@@ -3,9 +3,8 @@ import { useState } from "react";
 import styles from "./ProductCard.module.css";
 import useProductInfo from "/src/hooks/useProductInfo";
 
-export default function ProductCard({ productId }) {
+export default function ProductCard({ productId, addItemToCart }) {
   const { data, error, loading } = useProductInfo(productId);
-
   // State for managing the quantity input value
   const [quantity, setQuantity] = useState(1);
 
@@ -13,6 +12,10 @@ export default function ProductCard({ productId }) {
     setQuantity(Number(event.target.value));
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addItemToCart(data, quantity);
+  };
   if (error) return <p>An error occurred: {error}</p>;
   if (loading) return <p>Loading...</p>;
 
@@ -24,7 +27,7 @@ export default function ProductCard({ productId }) {
         <p>{data.price}$</p>
       </figcaption>
       <section>
-        <form action="">
+        <form className="search-form" onSubmit={handleSubmit}>
           <button>Add to Cart</button>
           <label htmlFor="product-quantity"></label>
           <input
@@ -44,4 +47,5 @@ export default function ProductCard({ productId }) {
 
 ProductCard.propTypes = {
   productId: PropTypes.number.isRequired,
+  addItemToCart: PropTypes.func.isRequired,
 };

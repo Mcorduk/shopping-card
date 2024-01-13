@@ -10,8 +10,8 @@ export default function ProductPage(props) {
   // productId is the parameter that will be used to request product from API
   return (
     <main className={styles.wrapper}>
-      {PRODUCT_ID_ARRAY.map((productId, index) => (
-        <ProductCard key={index} productId={productId} {...props} />
+      {PRODUCT_ID_ARRAY.map((productId) => (
+        <ProductCard key={productId} productId={productId} {...props} />
       ))}
     </main>
   );

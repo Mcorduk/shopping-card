@@ -8,14 +8,24 @@ function App() {
   const [cartItems, setCartItems] = useState({
     //FIXME I am an example product in this cart
     /* Product ID as key */
-    0: { name: "test", price: null, img: null, quantity: null },
+    // 0: { name: "test", price: null, quantity: null, img: null },
   });
 
   /* Will add item to cartItems if It doesn't exist
   Since object key is product Id, if Item already exists,it will be replaced
   probably with a new product quantity, see ProductCard component*/
-  const addItemToCart = (item) => {
-    if (item) setCartItems((lastCartItems) => ({ ...lastCartItems, item }));
+  const addItemToCart = (item, quantity) => {
+    if (item) {
+      setCartItems((lastCartItems) => ({
+        ...lastCartItems,
+        [item.id]: {
+          name: item.title,
+          price: item.price,
+          quantity: quantity,
+          img: item.images[0],
+        },
+      }));
+    }
   };
 
   return (
