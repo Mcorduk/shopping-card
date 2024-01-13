@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import ProductCard from "../../components/Products/ProductCard/ProductCard";
 import styles from "./ProductPage.module.css";
 import getProducts from "./productIdData";
@@ -16,3 +17,6 @@ export default function ProductPage(props) {
     </main>
   );
 }
+ProductPage.propTypes = {
+  room: PropTypes.string.isRequired,
+};

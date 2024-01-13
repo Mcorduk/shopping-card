@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-import ProductCard from "../../components/Products/ProductCard/ProductCard";
-import styles from "./ShoppingCartPage.module.css";
+import CartItemCard from "../../components/Cart/CartItemCard/CartItemCard";
+// import styles from "./ShoppingCartPage.module.css";
 
 export default function ShoppingCart(props) {
   const cartItemArray = Object.values(props.cartItems);
-
+  console.log(cartItemArray);
   return (
     <main>
       <header>
@@ -14,9 +14,9 @@ export default function ShoppingCart(props) {
 
       <section>
         {cartItemArray.map((cartItem) => (
-          <ProductCard
+          <CartItemCard
             key={cartItem.id}
-            productId={cartItem.id}
+            cartItem={cartItem}
             addItemToCart={props.addItemToCart}
           />
         ))}
