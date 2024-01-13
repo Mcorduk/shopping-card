@@ -32,7 +32,7 @@ const useProductInfo = (productId) => {
     if (productId) {
       getData(productId);
     }
-  }, [productId]); // Add productId to the dependency array
+  }, [productId]);
 
   return { data, error, loading }; // Fix the variable name to match the state
 };

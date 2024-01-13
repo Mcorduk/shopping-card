@@ -11,7 +11,7 @@ export default function ProductCard({ productId, addItemToCart }) {
   const handleQuantityChange = (event) => {
     setQuantity(Number(event.target.value));
   };
-
+  // Function to handle the submit event from rendered form
   const handleSubmit = (event) => {
     event.preventDefault();
     addItemToCart(data, quantity);

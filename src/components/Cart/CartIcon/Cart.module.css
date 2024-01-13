@@ -6,7 +6,7 @@
 
 }
 
-/*Since fill did not work, changing colors with filter on hover and focuds*/
+/* Since fill did not work, changing colors with filter on hover and focus */
 .cart:hover,
 .cart:focus {
   filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
