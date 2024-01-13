@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import styles from "./Cart.module.css";
-import ShoppingCartImage from "/public/cart.png";
+import ShoppingCartImage from "/src/assets/images/cart.png";
 
 export default function Cart({ cartItems }) {
   return (
