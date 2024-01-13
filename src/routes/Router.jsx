@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home/Home";
 import ProductPage from "../pages/ProductPage/ProductPage";
-import ShoppingCart from "../pages/ShoppingCart/ShoppingCartPage";
+import ShoppingCart from "../pages/ShoppingCartPage/ShoppingCartPage";
 
 const Router = (props) => {
   return (
