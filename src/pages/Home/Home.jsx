@@ -1,7 +1,9 @@
 import "./Home.module.css";
+import styles from "./Home.module.css";
+
 export default function Home() {
   return (
-    <>
+    <div className={styles.wrapper}>
       <main>
         <header>
           <h1>
@@ -20,6 +22,6 @@ export default function Home() {
           </p> */}
         </section>
       </main>
-    </>
+    </div>
   );
 }

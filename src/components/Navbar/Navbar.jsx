@@ -3,6 +3,8 @@ import Cart from "../Cart/Cart";
 import styles from "./Navbar.module.css";
 
 export default function Navbar(props) {
+  //This component is reusable, adjust below array for new projects
+  //Remove Cart component from the return statement for non e-commerce projects
   const navigationLinks = [
     {
       to: "/",

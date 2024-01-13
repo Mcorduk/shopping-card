@@ -9,10 +9,11 @@ export default function ProductCard({ productId }) {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <article>
+    <article className={styles.wrapper}>
       <img src={data.images[0]} />
       <section>
         <p>{data.title}</p>
+        <p>{data.price}$</p>
       </section>
     </article>
   );
